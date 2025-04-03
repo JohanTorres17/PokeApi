@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokémon App</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Buscar Pokémon</h1>
-    <input type="text" id="pokemonInput" placeholder="Escribe el nombre del Pokémon...">
-    <button onclick="buscarPokemon()">Buscar</button>
+    <main id="app">
+        <!--contenedor dinamico-->
+    </main>
 
-    <div id="pokemonContainer" class="pokemon-container" style="display: none;">
-        <img id="pokemonImage" src="" alt="Imagen del Pokémon">
-        <h2 id="pokemonName"></h2>
-        <p><strong>ID:</strong> <span id="pokemonId"></span></p>
-        <p><strong>Tipo:</strong> <span id="pokemonType"></span></p>
-        <p><strong>Habilidades:</strong> <span id="pokemonAbilities"></span></p>
-    </div>
+    <aside class="c-nav">
+        <button class="c-nav-item" onclick="mostrarLista()">Home</button>
+        <button class="c-nav-item" onclick="mostrarUsuario()">Usuario</button>
+        <button class="c-nav-item" onclick="mostrarAleatorios()">Aleatorios</button>
+        <button class="c-nav-item" onclick="mostrarFavoritos()">Favoritos</button>
+        <button class="c-nav-item" onclick="mostrarCapturados()">Capturados</button>
+    </aside>
 
-    <script src="script.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/lista.js"></script>
+    <script src="js/usuario.js"></script>
+    <script src="js/aleatorios.js"></script>
+    <script src="js/favoritos.js"></script>
+    <script src="js/capturados.js"></script>
+    <script src="js/detalle.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", General)
+    </script>
+
 </body>
 </html>
