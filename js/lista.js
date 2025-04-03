@@ -1,16 +1,8 @@
-function mostrarLista(pokemones) {
+function mostrarLista(pokemones){
     const app = document.getElementById("app");
+    app.innerHTML = "Lista";
+    console.log(pokemones)
     let Pokes = "";
-
-    const seccion = document.createElement("section");
-    seccion.classList.add("c-lista"); 
-
-/*
-    const buscador = document.createElement("input");
-    buscador.classList.add("c-buscador");
-    buscador.type = "text"
-    buscador.addEventListener("input", buscarPoke);
-*/
     for (let i = 0; i < pokemones.length; i++) {
         let id = pokemones[i].url.split("/")[6];
         Pokes += `
@@ -20,9 +12,5 @@ function mostrarLista(pokemones) {
             <p>${pokemones[i].name}</p>
         </div>`;
     }
-    seccion.innerHTML = Pokes;
-    
-    /*app.appendChild(buscador);*/
-    app.appendChild(seccion);
-
+    app.innerHTML = Pokes;
 }
