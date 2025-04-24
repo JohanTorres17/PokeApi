@@ -5,51 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeApp</title>
-    <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="manifest.json">
-
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "42b0fd81-a018-4dcf-aeca-0c6486e82524",
+    });
+  });
+</script>
 </head>
 
 <body>
     <button id="btn-instalar" style="display:none;">Instalar App</button>
-
     <main id="app">
         <!-- Contenido dinámico -->
     </main>
 
     <aside class="c-nav">
-
-        <button class="c-nav-item" onclick="General()">home</button>
-        <button class="c-nav-item" onclick="mostrarMios()">Mios</button>
-        <button class="c-nav-item" onclick="mostrarAleatorio()">Aleatorio</button>
-        <button class="c-nav-item" onclick="mostrarDatos()">Datos</button>
-    </aside>
-
-    
-
-    <script src="js/api.js"></script>
-    <script src="js/lista.js"></script>
-    <script src="js/mios.js"></script>
-    <script src="js/datos.js"></script>
-    <script src="js/aleatorio.js"></script>
-    <script src="js/favoritos.js"></script>
-    <script src="js/detalle.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", General)
-    </script>
-
-        <button class="c-nav-item" onclick="mostrarDatos()">Usuario</button>
         <button class="c-nav-item" onclick="mostrarMios()">Mios</button>
         <button class="c-nav-item" onclick="mostrarAleatorio(pokemones)">Aleatorio</button>
         <button class="c-nav-item" onclick="mostrarFavoritos()">Favoritos</button>
         <button class="c-nav-item" onclick="mostrarLista(pokemones)">Lista</button>
 
+
     </aside>
 
     <script src="js/api.js"></script>
     <script src="js/lista.js"></script>
-    <script src="js/aleatorio.js"></script>
+    <script src="js/aleatorios.js"></script>
     <script src="js/mios.js"></script>
     <script src="js/datos.js"></script>
     <script src="js/favoritos.js"></script>

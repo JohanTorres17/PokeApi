@@ -65,10 +65,4 @@ async function mostrarDetalle(id) {
 
     app.innerHTML = detalle;
     actualizarIconoFavorito(id);
-
-function mostrarDetalle(nombre){
-    const app = document.getElementById("app");
-    app.innerHTML = nombre;
-
-}
 }

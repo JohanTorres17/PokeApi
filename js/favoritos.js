@@ -1,4 +1,3 @@
-
 function mostrarFavoritos() {
     const app = document.getElementById("app");
     app.innerHTML = "";
@@ -8,5 +7,4 @@ function mostrarFavoritos() {
     contenedor.innerHTML = generarLista(favoritos);
 
     app.appendChild(contenedor);
-
 }
